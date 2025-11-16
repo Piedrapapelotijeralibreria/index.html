@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIEDRA PAPEL O TIJERA LIBRERIA - Soluciones prácticas y creativas para tus proyectos</title>
-    <meta name="description" content="Librería y papelería en San Fernando del Valle de Catamarca. Ofrecemos lapiceras, lápices, reglas, marcadores, felpones, tijeras y más productos de calidad.">
+    <title>PIEDRA PAPEL O TIJERA LIBRERIA - Materiales de librería y papelería</title>
+    <meta name="description" content="Librería y papelería en San Fernando del Valle de Catamarca. Vendemos lapiceras, lápices, reglas, marcadores, felpones, tijeras, gomas, boligomas y más productos de calidad.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -95,7 +95,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(192, 17, 44, 0.8), rgba(192, 17, 44, 0.9)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(192, 17, 44, 0.8), rgba(192, 17, 44, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--secondary-color);
@@ -224,6 +224,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
+            position: relative;
         }
         
         .product-card:hover {
@@ -263,6 +264,35 @@
             font-weight: 600;
             color: var(--primary-color);
             font-size: 1.1rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .buy-btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .buy-btn:hover {
+            background-color: #a00e24;
+        }
+        
+        .wishlist-btn {
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            font-size: 1.2rem;
         }
         
         /* Promotions Section */
@@ -615,7 +645,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <i class="fas fa-book logo-icon"></i>
+                <i class="fas fa-pencil-alt logo-icon"></i>
                 <h1>PIEDRA PAPEL O TIJERA LIBRERIA</h1>
             </div>
             <div class="mobile-menu">
@@ -638,7 +668,7 @@
     <section class="hero" id="inicio">
         <div class="container">
             <h2>Soluciones prácticas y creativas para tus proyectos</h2>
-            <p>En Piedra Papel o Tijera Librería encontrarás todo lo que necesitas para dar vida a tus ideas. Desde materiales básicos hasta productos especializados.</p>
+            <p>En Piedra Papel o Tijera Librería encontrarás todo lo que necesitas para la escuela, oficina y manualidades. Materiales de calidad para dar vida a tus ideas.</p>
             <a href="#productos" class="btn">Ver Productos</a>
         </div>
     </section>
@@ -651,13 +681,13 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Nuestra Historia</h3>
-                    <p>Piedra Papel o Tijera Librería nació como un emprendimiento familiar con la visión de ofrecer productos de calidad y un servicio personalizado a nuestros clientes en San Fernando del Valle de Catamarca.</p>
-                    <p>Con más de 10 años en el mercado, nos hemos consolidado como la librería de confianza para estudiantes, profesionales y creativos que buscan materiales de primera calidad para sus proyectos.</p>
-                    <p>Nuestro compromiso es brindar una atención excelente, asesorando a cada cliente para que encuentre exactamente lo que necesita.</p>
+                    <h3>Tu Librería de Confianza en Catamarca</h3>
+                    <p>Piedra Papel o Tijera Librería es un emprendimiento familiar dedicado a la venta de materiales de librería y papelería de alta calidad en San Fernando del Valle de Catamarca.</p>
+                    <p>Nos especializamos en proveer todos los insumos necesarios para estudiantes, oficinas, artistas y creativos. Desde los elementos más básicos como lápices y lapiceras, hasta materiales especializados para manualidades y proyectos creativos.</p>
+                    <p>Nuestro compromiso es ofrecer productos de primera calidad acompañados de una atención personalizada que te ayude a encontrar exactamente lo que necesitas para tus proyectos.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Interior de nuestra librería">
+                    <img src="https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Nuestra tienda de librería">
                 </div>
             </div>
         </div>
@@ -689,6 +719,10 @@
                         <h3 class="product-name">Lapiceras de Colores</h3>
                         <p class="product-description">Set de 12 lapiceras de tinta gel en colores variados.</p>
                         <div class="product-price">$1.200</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -702,6 +736,10 @@
                         <h3 class="product-name">Lápices HB</h3>
                         <p class="product-description">Caja con 12 lápices de grafito HB de alta calidad.</p>
                         <div class="product-price">$800</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -715,6 +753,10 @@
                         <h3 class="product-name">Goma de Borrar</h3>
                         <p class="product-description">Goma de borrar suave que no daña el papel.</p>
                         <div class="product-price">$150</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -728,6 +770,10 @@
                         <h3 class="product-name">Tijeras Escolares</h3>
                         <p class="product-description">Tijeras de acero inoxidable con punta redondeada.</p>
                         <div class="product-price">$450</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -741,6 +787,10 @@
                         <h3 class="product-name">Marcadores Felpones</h3>
                         <p class="product-description">Set de 8 marcadores felpones de colores vibrantes.</p>
                         <div class="product-price">$950</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -754,6 +804,10 @@
                         <h3 class="product-name">Regla 30 cm</h3>
                         <p class="product-description">Regla transparente de 30 cm con medidas en cm y pulgadas.</p>
                         <div class="product-price">$300</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -767,6 +821,10 @@
                         <h3 class="product-name">Boligoma</h3>
                         <p class="product-description">Pegamento en barra de 21g, no tóxico y de secado rápido.</p>
                         <div class="product-price">$250</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -780,6 +838,10 @@
                         <h3 class="product-name">Plasticola</h3>
                         <p class="product-description">Pegamento líquido para manualidades y trabajos escolares.</p>
                         <div class="product-price">$320</div>
+                        <div class="product-actions">
+                            <button class="buy-btn">Comprar</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -799,6 +861,7 @@
                     <p class="promo-description">Todo lo necesario para el regreso a clases</p>
                     <div class="promo-price">$2.500</div>
                     <p>Incluye: 2 lápices, 2 lapiceras, goma, regla y cuaderno</p>
+                    <button class="buy-btn" style="margin-top: 15px;">Comprar Combo</button>
                 </div>
                 
                 <!-- Promoción 2 -->
@@ -807,6 +870,7 @@
                     <p class="promo-description">Para los amantes del arte y las manualidades</p>
                     <div class="promo-price">$3.800</div>
                     <p>Incluye: marcadores, tijeras, plasticola, papel crepe y catulina</p>
+                    <button class="buy-btn" style="margin-top: 15px;">Comprar Combo</button>
                 </div>
                 
                 <!-- Promoción 3 -->
@@ -815,6 +879,7 @@
                     <p class="promo-description">Aprovecha nuestros descuentos especiales</p>
                     <div class="promo-price">20% OFF</div>
                     <p>En toda la sección de papelería hasta agotar stock</p>
+                    <button class="buy-btn" style="margin-top: 15px;">Ver Ofertas</button>
                 </div>
             </div>
         </div>
@@ -978,68 +1043,4 @@
 
     <script>
         // Menú móvil
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-        
-        // Filtro de productos por categoría
-        document.querySelectorAll('.category-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Remover clase active de todos los botones
-                document.querySelectorAll('.category-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Agregar clase active al botón clickeado
-                this.classList.add('active');
-                
-                const category = this.getAttribute('data-category');
-                
-                // Mostrar/ocultar productos según la categoría
-                document.querySelectorAll('.product-card').forEach(product => {
-                    if (category === 'all' || product.getAttribute('data-category') === category) {
-                        product.style.display = 'block';
-                    } else {
-                        product.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Envío de formulario de testimonio
-        document.querySelector('.testimonial-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu testimonio! Lo revisaremos y lo publicaremos pronto.');
-            this.reset();
-        });
-        
-        // Envío de formulario de contacto
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Mensaje enviado! Te contactaremos a la brevedad.');
-            this.reset();
-        });
-        
-        // Smooth scroll para enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Cerrar menú móvil si está abierto
-                    document.querySelector('nav ul').classList.remove('show');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+        document.querySelector('.mobile-menu').addEventListener('click
