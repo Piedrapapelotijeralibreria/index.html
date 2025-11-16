@@ -56,14 +56,13 @@
             align-items: center;
         }
         
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-left: 10px;
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
         }
         
-        .logo-icon {
-            font-size: 2rem;
+        .logo h1 {
+            font-size: 1.8rem;
             color: var(--primary-color);
         }
         
@@ -100,7 +99,18 @@
             background-position: center;
             color: var(--secondary-color);
             text-align: center;
-            padding: 100px 0;
+            padding: 80px 0;
+        }
+        
+        .hero-logo {
+            max-width: 300px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
         }
         
         .hero h2 {
@@ -472,7 +482,7 @@
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
-            borderRadius: 5px;
+            border-radius: 5px;
         }
         
         .contact-form button {
@@ -628,11 +638,15 @@
             section {
                 padding: 60px 0;
             }
+            
+            .hero-logo {
+                max-width: 250px;
+            }
         }
         
         @media (max-width: 576px) {
             .hero {
-                padding: 80px 0;
+                padding: 60px 0;
             }
             
             .hero h2 {
@@ -642,6 +656,14 @@
             .section-title h2 {
                 font-size: 1.6rem;
             }
+            
+            .hero-logo {
+                max-width: 200px;
+            }
+            
+            .logo h1 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -650,7 +672,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <i class="fas fa-pencil-alt logo-icon"></i>
+                <img src="Logo Rojo 1080 sin fondo.png" alt="Piedra Papel o Tijera Librería">
                 <h1>PIEDRA PAPEL O TIJERA LIBRERIA</h1>
             </div>
             <div class="mobile-menu">
@@ -672,6 +694,9 @@
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container">
+            <div class="hero-logo">
+                <img src="Logo Rojo 1080 sin fondo.png" alt="Piedra Papel o Tijera Librería">
+            </div>
             <h2>Soluciones prácticas y creativas para tus proyectos</h2>
             <p>En Piedra Papel o Tijera Librería encontrarás todo lo que necesitas para la escuela, oficina y manualidades. Materiales de calidad para dar vida a tus ideas.</p>
             <a href="#productos" class="btn">Ver Productos</a>
@@ -967,7 +992,7 @@
                         </div>
                         <div>
                             <h3>Teléfono</h3>
-                            <p>+54 3834 123456</p>
+                            <p>+54 383 4225852</p>
                         </div>
                     </div>
                     
@@ -977,7 +1002,7 @@
                         </div>
                         <div>
                             <h3>WhatsApp</h3>
-                            <p>+54 9 3834 123456</p>
+                            <p>+54 9 383 4225852</p>
                         </div>
                     </div>
                     
@@ -1023,15 +1048,4 @@
                 <div class="footer-links">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Sobre Nosotros</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#promociones">Promociones</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> San Fernando del Valle de Catamarca</p>
-                    <p><i class="fas fa-phone"></i> +54 3834 123
+                        <li><
