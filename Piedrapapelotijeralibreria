@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIEDRA PAPEL O TIJERA LIBRERIA - Soluciones prácticas y creativas para tus proyectos</title>
+    <meta name="description" content="Librería y papelería en San Fernando del Valle de Catamarca. Ofrecemos lapiceras, lápices, reglas, marcadores, felpones, tijeras y más productos de calidad.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #c0112c;
+            --secondary-color: #ffffff;
+            --accent-color: #f8f8f8;
+            --text-color: #333333;
+            --light-gray: #f0f0f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(192, 17, 44, 0.8), rgba(192, 17, 44, 0.9)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--accent-color);
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .category-btn {
+            background-color: var(--secondary-color);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image i {
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-category {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .product-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Promotions Section */
+        .promotions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .promo-card {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .promo-card::before {
+            content: 'OFERTA';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: 600;
+        }
+        
+        .promo-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .promo-description {
+            margin-bottom: 20px;
+        }
+        
+        .promo-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--accent-color);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--primary-color);
+            position: absolute;
+            top: -15px;
+            left: -10px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .add-testimonial {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .add-testimonial h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-form input, .testimonial-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .testimonial-form button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .testimonial-form button:hover {
+            background-color: #a00e24;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #a00e24;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #a00e24;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: var(--secondary-color);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h4::after, .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-book logo-icon"></i>
+                <h1>PIEDRA PAPEL O TIJERA LIBRERIA</h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#promociones">Promociones</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h2>Soluciones prácticas y creativas para tus proyectos</h2>
+            <p>En Piedra Papel o Tijera Librería encontrarás todo lo que necesitas para dar vida a tus ideas. Desde materiales básicos hasta productos especializados.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nuestra Historia</h3>
+                    <p>Piedra Papel o Tijera Librería nació como un emprendimiento familiar con la visión de ofrecer productos de calidad y un servicio personalizado a nuestros clientes en San Fernando del Valle de Catamarca.</p>
+                    <p>Con más de 10 años en el mercado, nos hemos consolidado como la librería de confianza para estudiantes, profesionales y creativos que buscan materiales de primera calidad para sus proyectos.</p>
+                    <p>Nuestro compromiso es brindar una atención excelente, asesorando a cada cliente para que encuentre exactamente lo que necesita.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Interior de nuestra librería">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Productos</h2>
+            </div>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="escribir">Para Escribir</button>
+                <button class="category-btn" data-category="borrar">Para Borrar</button>
+                <button class="category-btn" data-category="cortar">Para Cortar</button>
+                <button class="category-btn" data-category="pintar">Para Pintar</button>
+                <button class="category-btn" data-category="papeleria">Papelería</button>
+                <button class="category-btn" data-category="otros">Otros</button>
+            </div>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="escribir">
+                    <div class="product-image">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Para Escribir</div>
+                        <h3 class="product-name">Lapiceras de Colores</h3>
+                        <p class="product-description">Set de 12 lapiceras de tinta gel en colores variados.</p>
+                        <div class="product-price">$1.200</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="escribir">
+                    <div class="product-image">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Para Escribir</div>
+                        <h3 class="product-name">Lápices HB</h3>
+                        <p class="product-description">Caja con 12 lápices de grafito HB de alta calidad.</p>
+                        <div class="product-price">$800</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card" data-category="borrar">
+                    <div class="product-image">
+                        <i class="fas fa-eraser"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Para Borrar</div>
+                        <h3 class="product-name">Goma de Borrar</h3>
+                        <p class="product-description">Goma de borrar suave que no daña el papel.</p>
+                        <div class="product-price">$150</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="product-card" data-category="cortar">
+                    <div class="product-image">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Para Cortar</div>
+                        <h3 class="product-name">Tijeras Escolares</h3>
+                        <p class="product-description">Tijeras de acero inoxidable con punta redondeada.</p>
+                        <div class="product-price">$450</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 5 -->
+                <div class="product-card" data-category="pintar">
+                    <div class="product-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Para Pintar</div>
+                        <h3 class="product-name">Marcadores Felpones</h3>
+                        <p class="product-description">Set de 8 marcadores felpones de colores vibrantes.</p>
+                        <div class="product-price">$950</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 -->
+                <div class="product-card" data-category="papeleria">
+                    <div class="product-image">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Papelería</div>
+                        <h3 class="product-name">Regla 30 cm</h3>
+                        <p class="product-description">Regla transparente de 30 cm con medidas en cm y pulgadas.</p>
+                        <div class="product-price">$300</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 7 -->
+                <div class="product-card" data-category="otros">
+                    <div class="product-image">
+                        <i class="fas fa-glue"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Otros</div>
+                        <h3 class="product-name">Boligoma</h3>
+                        <p class="product-description">Pegamento en barra de 21g, no tóxico y de secado rápido.</p>
+                        <div class="product-price">$250</div>
+                    </div>
+                </div>
+                
+                <!-- Producto 8 -->
+                <div class="product-card" data-category="otros">
+                    <div class="product-image">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Otros</div>
+                        <h3 class="product-name">Plasticola</h3>
+                        <p class="product-description">Pegamento líquido para manualidades y trabajos escolares.</p>
+                        <div class="product-price">$320</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promociones">
+        <div class="container">
+            <div class="section-title">
+                <h2>Promociones y Combos</h2>
+            </div>
+            <div class="promotions-container">
+                <!-- Promoción 1 -->
+                <div class="promo-card">
+                    <h3 class="promo-title">Combo Escolar Básico</h3>
+                    <p class="promo-description">Todo lo necesario para el regreso a clases</p>
+                    <div class="promo-price">$2.500</div>
+                    <p>Incluye: 2 lápices, 2 lapiceras, goma, regla y cuaderno</p>
+                </div>
+                
+                <!-- Promoción 2 -->
+                <div class="promo-card">
+                    <h3 class="promo-title">Kit Creativo</h3>
+                    <p class="promo-description">Para los amantes del arte y las manualidades</p>
+                    <div class="promo-price">$3.800</div>
+                    <p>Incluye: marcadores, tijeras, plasticola, papel crepe y catulina</p>
+                </div>
+                
+                <!-- Promoción 3 -->
+                <div class="promo-card">
+                    <h3 class="promo-title">Oferta de Temporada</h3>
+                    <p class="promo-description">Aprovecha nuestros descuentos especiales</p>
+                    <div class="promo-price">20% OFF</div>
+                    <p>En toda la sección de papelería hasta agotar stock</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios de Clientes</h2>
+            </div>
+            <div class="testimonials-container">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Siempre encuentro lo que necesito en Piedra Papel o Tijera. La atención es excelente y los productos son de muy buena calidad.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Docente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Como estudiante de arquitectura, necesito materiales específicos. En esta librería siempre me asesoran bien y tienen todo lo que busco.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Rodríguez</h4>
+                            <p>Estudiante</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulario para agregar testimonio -->
+                <div class="add-testimonial">
+                    <h3>Compartí tu experiencia</h3>
+                    <form class="testimonial-form">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <input type="text" placeholder="Tu ocupación (opcional)">
+                        <textarea placeholder="Tu testimonio" rows="4" required></textarea>
+                        <button type="submit">Enviar Testimonio</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pedidos y Contacto</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Siempre Viva 123, San Fernando del Valle de Catamarca</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+54 3834 123456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>+54 9 3834 123456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@piedrapapelotijera.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono">
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>PIEDRA PAPEL O TIJERA LIBRERIA</h3>
+                    <p>Soluciones prácticas y creativas para tus proyectos</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> San Fernando del Valle de Catamarca</p>
+                    <p><i class="fas fa-phone"></i> +54 3834 123456</p>
+                    <p><i class="fas fa-envelope"></i> info@piedrapapelotijera.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Piedra Papel o Tijera Librería. Todos los derechos reservados.</p>
+                <p>Gracias por confiar en nosotros</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Filtro de productos por categoría
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remover clase active de todos los botones
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Agregar clase active al botón clickeado
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                // Mostrar/ocultar productos según la categoría
+                document.querySelectorAll('.product-card').forEach(product => {
+                    if (category === 'all' || product.getAttribute('data-category') === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Envío de formulario de testimonio
+        document.querySelector('.testimonial-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu testimonio! Lo revisaremos y lo publicaremos pronto.');
+            this.reset();
+        });
+        
+        // Envío de formulario de contacto
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado! Te contactaremos a la brevedad.');
+            this.reset();
+        });
+        
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Cerrar menú móvil si está abierto
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
