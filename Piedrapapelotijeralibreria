@@ -56,9 +56,19 @@
             align-items: center;
         }
         
-        .logo img {
+        .logo-placeholder {
+            width: 50px;
             height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
             margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-align: center;
         }
         
         .logo h1 {
@@ -107,10 +117,20 @@
             margin: 0 auto 30px;
         }
         
-        .hero-logo img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        .logo-placeholder-large {
+            width: 300px;
+            height: 150px;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .hero h2 {
@@ -639,7 +659,7 @@
                 padding: 60px 0;
             }
             
-            .hero-logo {
+            .logo-placeholder-large {
                 max-width: 250px;
             }
         }
@@ -657,12 +677,14 @@
                 font-size: 1.6rem;
             }
             
-            .hero-logo {
-                max-width: 200px;
-            }
-            
             .logo h1 {
                 font-size: 1.4rem;
+            }
+            
+            .logo-placeholder-large {
+                max-width: 200px;
+                height: 100px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -672,7 +694,9 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="Logo Rojo 1080 sin fondo.png" alt="Piedra Papel o Tijera Librería">
+                <div class="logo-placeholder">
+                    LOGO
+                </div>
                 <h1>PIEDRA PAPEL O TIJERA LIBRERIA</h1>
             </div>
             <div class="mobile-menu">
@@ -695,7 +719,9 @@
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-logo">
-                <img src="Logo Rojo 1080 sin fondo.png" alt="Piedra Papel o Tijera Librería">
+                <div class="logo-placeholder-large">
+                    LOGO<br>PIEDRA PAPEL O TIJERA
+                </div>
             </div>
             <h2>Soluciones prácticas y creativas para tus proyectos</h2>
             <p>En Piedra Papel o Tijera Librería encontrarás todo lo que necesitas para la escuela, oficina y manualidades. Materiales de calidad para dar vida a tus ideas.</p>
@@ -982,7 +1008,7 @@
                         </div>
                         <div>
                             <h3>Dirección</h3>
-                            <p>Av. Siempre Viva 123, San Fernando del Valle de Catamarca</p>
+                            <p>Juan Archeverroa 64, San Fernando del Valle de Catamarca</p>
                         </div>
                     </div>
                     
@@ -1017,9 +1043,8 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/piedrapapelotijeralibreriaok?igsh=MWZrczlpaTVhZXFxcA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5493834225852" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -1027,25 +1052,4 @@
                     <form>
                         <input type="text" placeholder="Nombre completo" required>
                         <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Teléfono">
-                        <textarea placeholder="Mensaje" rows="5" required></textarea>
-                        <button type="submit">Enviar Mensaje</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h3>PIEDRA PAPEL O TIJERA LIBRERIA</h3>
-                    <p>Soluciones prácticas y creativas para tus proyectos</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><
+                        <input type="tel" placeholder
